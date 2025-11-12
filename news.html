@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="utf-8">
+    <title>Atletica Libertas — Notizie & Eventi</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="atletica, notizie, eventi, gare, corsi" name="keywords">
+    <meta content="Notizie, calendario eventi e aggiornamenti dell'A.S.D. Atletica Libertas Città di Castello"
+        name="description">
+
+    <!-- Favicon -->
+    <link href="img/logo-no-sfondo.png" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;700&family=Work+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        /* Sticky footer */
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        footer.footer {
+            margin-top: auto;
+        }
+
+        /* Chips data evento */
+        .date-chip {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background: #0d6efd;
+            color: #fff;
+            border-radius: .5rem;
+            padding: .4rem .6rem;
+            line-height: 1;
+            font-weight: 600;
+            box-shadow: 0 4px 14px rgba(13, 110, 253, .25);
+        }
+
+        .date-chip .day {
+            font-size: 1.1rem;
+            display: block;
+        }
+
+        .date-chip .month {
+            font-size: .8rem;
+            text-transform: uppercase;
+            opacity: .95;
+        }
+
+        /* Tag */
+        .post-tag {
+            display: inline-block;
+            font-size: .75rem;
+            text-transform: uppercase;
+            letter-spacing: .04em;
+            background: #222;
+            color: #fff;
+            padding: .25rem .5rem;
+            border-radius: .35rem;
+        }
+
+        /* Sidebar */
+        .widget {
+            background: #111;
+            border: 1px solid #2b2b2b;
+            border-radius: .75rem;
+            padding: 1.25rem;
+        }
+
+        .widget h5 {
+            text-transform: uppercase;
+            font-size: .9rem;
+            letter-spacing: .06em;
+        }
+
+        /* Hero overlay */
+        .page-header {
+            background: url('img/sfondo2.png') center/cover no-repeat;
+            position: relative;
+        }
+
+        .page-header::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, .45);
+        }
+
+        .page-header>.container {
+            position: relative;
+            z-index: 2;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Header Start -->
+    <div class="container-fluid p-0">
+        <nav class="navbar navbar-expand-lg navbar-dark px-lg-5">
+            <a href="index.html" class="navbar-brand ms-4 ms-lg-0 d-flex align-items-center">
+                <img src="img/logo-no-sfondo.png" alt="Logo" style="width: 42px; height:42px; object-fit:contain;"
+                    class="me-2">
+                <h2 class="mb-0 text-uppercase">Atletica Libertas</h2>
+            </a>
+            <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse"
+                data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav mx-auto p-4 p-lg-0">
+                    <a href="index.html" class="nav-item nav-link ">Home</a>
+                    <a href="index.html#about" class="nav-item nav-link">Chi Siamo</a>
+                    <a href="index.html#service" class="nav-item nav-link">Attività</a>
+                    <a href="news.html" class="nav-item nav-link active">Notizie & Eventi</a>
+                    <a href="index.html#contact" class="nav-item nav-link">Contatti</a>
+                    <a href="index.html#dove" class="nav-item nav-link">Dove siamo</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero -->
+        <div class="page-header pb-5">
+            <div class="container text-center py-5 text-white">
+                <h1 class="display-4 text-uppercase mb-3 animated slideInDown">Notizie & Eventi</h1>
+                <nav aria-label="breadcrumb" class="animated slideInDown">
+                    <ol class="breadcrumb justify-content-center text-uppercase mb-0">
+                        <li class="breadcrumb-item"><a class="text-white-50" href="index.html">Home</a></li>
+                        <li class="breadcrumb-item text-primary active" aria-current="page">Notizie & Eventi</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+    <!-- Main Content -->
+    <!-- Main Content -->
+    <main class="container my-5">
+        <div class="row g-5">
+
+            <!-- COLONNA SINISTRA: Eventi + Notizie -->
+            <div class="col-lg-8">
+                <!-- Prossimi Eventi (DINAMICO da Google Sheets) -->
+                <section id="calendario" class="mb-5">
+                    <div class="title wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="title-left">
+                            <h5>Calendario</h5>
+                            <h1>Prossimi Eventi</h1>
+                        </div>
+                    </div>
+
+                    <div id="events-list" class="list-group">
+                        <!-- Caricamento eventi... -->
+                    </div>
+
+                    <div class="text-end mt-3">
+                        <a id="sheet-admin-link" href="#" target="_blank" class="btn btn-outline-primary border-2 px-4">
+                            Modifica / Aggiungi su Google Sheets
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Notizie (DINAMICHE da Google Sheets) -->
+                <section id="notizie" class="mb-5">
+                    <div class="title wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="title-left">
+                            <h5>Aggiornamenti</h5>
+                            <h1>Ultime Notizie</h1>
+                        </div>
+                    </div>
+
+                    <div id="news-list" class="row g-4"><!-- cards news qui --></div>
+
+                    <div class="text-center mt-3">
+                        <button id="show-all-news" class="btn btn-outline-primary border-2 px-4 d-none">
+                            Mostra tutte
+                        </button>
+                    </div>
+                </section>
+            </div>
+
+            <!-- COLONNA DESTRA: ASIDE (unico blocco, resta accanto sia a Eventi che a Notizie) -->
+            <aside class="col-lg-4">
+                <div class="sticky-lg-top" style="top: 2rem;">
+                    <!-- CTA iscrizioni -->
+                    <div class="widget mb-4">
+                        <div class="p-4 rounded-3 bg-dark border border-secondary">
+                            <h5 class="text-uppercase mb-2">Iscrizioni aperte</h5>
+                            <p class="text-white-50 mb-3">Bambini 4–12, gruppi agonisti, amatori. Prima prova gratuita!
+                            </p>
+                            <a href="https://forms.gle/tuo-modulo" target="_blank" class="btn btn-primary w-100">Compila
+                                la richiesta</a>
+                            <a href="docs/regolamento.pdf" class="d-block mt-2 small link-light">Scarica regolamento
+                                (PDF)</a>
+                        </div>
+                    </div>
+
+                    <!-- Orari & luoghi (accordion) -->
+                    <div class="widget mb-4">
+                        <div class="p-4 rounded-3 bg-dark border border-secondary">
+                            <h5 class="text-uppercase mb-3">Orari allenamenti</h5>
+                            <div class="accordion accordion-flush" id="acc-orari">
+                                <div class="accordion-item bg-dark border-secondary">
+                                    <h2 class="accordion-header" id="h1">
+                                        <button class="accordion-button collapsed bg-dark text-light" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#c1">
+                                            Esordienti (4–8 anni)
+                                        </button>
+                                    </h2>
+                                    <div id="c1" class="accordion-collapse collapse" data-bs-parent="#acc-orari">
+                                        <div class="accordion-body text-white-50">Mar & Gio — 17:00-18:00<br>Impianto
+                                            “Angiolo Monti”</div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item bg-dark border-secondary">
+                                    <h2 class="accordion-header" id="h2">
+                                        <button class="accordion-button collapsed bg-dark text-light" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#c2">
+                                            Ragazzi/Cadetti (9–14 anni)
+                                        </button>
+                                    </h2>
+                                    <div id="c2" class="accordion-collapse collapse" data-bs-parent="#acc-orari">
+                                        <div class="accordion-body text-white-50">Lun-Mer-Ven — 17:30-19:00<br>Impianto
+                                            “Angiolo Monti”</div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item bg-dark border-secondary">
+                                    <h2 class="accordion-header" id="h3">
+                                        <button class="accordion-button collapsed bg-dark text-light" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#c3">
+                                            Agonisti / Adulti
+                                        </button>
+                                    </h2>
+                                    <div id="c3" class="accordion-collapse collapse" data-bs-parent="#acc-orari">
+                                        <div class="accordion-body text-white-50">Lun-Sab — 18:30-20:00<br>Pista +
+                                            uscite su strada</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="index.html#dove" class="btn btn-outline-primary border-2 w-100 mt-3">Come
+                                arrivare</a>
+                        </div>
+                    </div>
+
+                    <!-- Contatti rapidi -->
+                    <div class="widget mb-4">
+                        <div class="p-4 rounded-3 bg-dark border border-secondary">
+                            <h5 class="text-uppercase mb-3">Contatti rapidi</h5>
+                            <p class="mb-2"><i class="fa fa-phone me-2 text-primary"></i><a
+                                    class="link-light text-decoration-none" href="tel:+393331234567">+39 333 123
+                                    4567</a></p>
+                            <p class="mb-2"><i class="fa fa-envelope me-2 text-primary"></i><a
+                                    class="link-light text-decoration-none"
+                                    href="mailto:info@atleticalibertascastello.it">info@atleticalibertascastello.it</a>
+                            </p>
+                            <p class="mb-0"><i class="fa fa-location-dot me-2 text-primary"></i>Viale Bologni snc, Città
+                                di Castello (PG)</p>
+                        </div>
+                    </div>
+
+                    <!-- Documenti utili -->
+                    <div class="widget mb-4">
+                        <div class="p-4 rounded-3 bg-dark border border-secondary">
+                            <h5 class="text-uppercase mb-3">Documenti</h5>
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-2"><i class="fa fa-file-pdf me-2 text-primary"></i><a
+                                        class="link-light text-decoration-none" href="docs/modulo-iscrizione.pdf"
+                                        target="_blank">Modulo iscrizione</a></li>
+                                <li class="mb-2"><i class="fa fa-file-pdf me-2 text-primary"></i><a
+                                        class="link-light text-decoration-none"
+                                        href="docs/autocertificazione-medica.pdf" target="_blank">Autocertificazione
+                                        medica</a></li>
+                                <li class="mb-2"><i class="fa fa-file-pdf me-2 text-primary"></i><a
+                                        class="link-light text-decoration-none" href="docs/privacy.pdf"
+                                        target="_blank">Informativa privacy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Gestione eventi -->
+                    <div class="widget">
+                        <div class="p-4 rounded-3 bg-dark border border-secondary">
+                            <h5 class="text-uppercase mb-2">Gestione eventi</h5>
+                            <p class="text-white-50 mb-3">Aggiungi o modifica gli eventi direttamente dal foglio
+                                condiviso.</p>
+                            <a id="sheet-admin-link" href="#" target="_blank"
+                                class="btn btn-outline-primary border-2 w-100">Modifica su Google Sheets</a>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+        </div>
+    </main>
+
+
+    <!-- Newsletter Banner -->
+    <div class="container-fluid py-5 bg-secondary">
+        <div class="container py-5">
+            <div class="row g-0 justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <div class="title mx-5 px-5 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="title-center">
+                            <h5>Newsletter</h5>
+                            <h1>Resta aggiornato su gare e corsi</h1>
+                        </div>
+                    </div>
+                    <p class="fs-5 mb-5 wow fadeInUp" data-wow-delay="0.2s">
+                        Inserisci la tua email per ricevere aggiornamenti su eventi, risultati e iniziative della
+                        società.
+                    </p>
+                    <div class="position-relative wow fadeInUp" data-wow-delay="0.3s">
+                        <input class="form-control border-0 bg-dark rounded-pill w-100 py-4 ps-4 pe-5" type="email"
+                            placeholder="La tua email">
+                        <button type="button" class="btn btn-primary py-3 px-4 position-absolute top-0 end-0 me-2"
+                            style="margin-top: 7px;">Iscriviti</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Start -->
+    <footer class="footer bg-dark text-light py-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container text-center">
+            <a href="index.html">
+                <h1 class="display-6 mb-3 text-white text-uppercase">
+                    <i class="fa-solid fa-person-running me-2 "></i>Atletica Libertas
+                </h1>
+            </a>
+
+            <div class="d-flex justify-content-center mb-4">
+                <a class="btn btn-lg-square btn-outline-primary border-2 m-1"
+                    href="https://www.facebook.com/atleticalibertascastello" target="_blank"><i
+                        class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-lg-square btn-outline-primary border-2 m-1"
+                    href="https://www.instagram.com/atleticalibertas" target="_blank"><i
+                        class="fab fa-instagram"></i></a>
+                
+                <a class="btn btn-lg-square btn-outline-primary border-2 m-1"
+                    href="mailto:info@atleticalibertascastello.it"><i class="fa-regular fa-envelope"></i></a>
+            </div>
+
+            <p class="mb-2">
+                &copy; <span class="text-primary" style="color:white !important;">A.S.D. Atletica Libertas Città di
+                    Castello</span> — Tutti i diritti
+                riservati.<br>
+          <a href="cookie-policy.html" class="nav-item nav-link active">Cookie & Privacy</a><br>
+            </p>
+            <p class="mb-0 small">Realizzato da <strong>Riccardo Tanzi</strong></p>
+        </div>
+    </footer>
+    <!-- Footer End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-outline-primary border-2 btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+    <!-- JSON-LD: esempio per un evento (schema.org) -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SportsEvent",
+    "name": "Meeting Provinciale Giovanile",
+    "startDate": "2025-11-24T15:00:00+01:00",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "location": {
+      "@type": "Place",
+      "name": "Impianto di Atletica \"Angiolo Monti\"",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Viale Bologni snc",
+        "addressLocality": "Città di Castello",
+        "postalCode": "06012",
+        "addressRegion": "PG",
+        "addressCountry": "IT"
+      }
+    },
+    "organizer": {
+      "@type": "SportsOrganization",
+      "name": "A.S.D. Atletica Libertas Città di Castello"
+    }
+  }
+  </script>
+
+    <!-- === Google Sheets: CARICAMENTO EVENTI (Publish-to-Web CSV, no gviz) === -->
+    <script>
+        /** CONFIG: URL CSV “Pubblica sul Web” del tab Eventi */
+        const PUBLISHED_CSV_URL =
+            "https://docs.google.com/spreadsheets/d/e/2PACX-1vTsOkZ93mzlt-_cgnWRIPq0y23jcHz7vonOz74-FCUv_mP14LltvLoVDPGym-p5U-og8Sh4BTHdlEL3/pub?gid=0&single=true&output=csv";
+
+        /** (opzionale) link “Modifica su Sheets” se hai un <a id="sheet-admin-link"> */
+        const SHEET_EDIT_ID = "1J7gmg078vB3OqpusvOJh055OxSgnKVCdT1Pe3unb2jg";
+
+        document.addEventListener("DOMContentLoaded", initEvents);
+
+        function setupAdminLink() {
+            const link = document.getElementById("sheet-admin-link");
+            if (link) link.href = `https://docs.google.com/spreadsheets/d/${SHEET_EDIT_ID}/edit`;
+        }
+
+        /** Helpers date */
+        function parseDate(dateStr, timeStr) {
+            try {
+                const [y, m, d] = (dateStr || "").split("-").map(Number);
+                const [hh, mm] = (timeStr || "00:00").split(":").map(Number);
+                return new Date(y, (m || 1) - 1, d || 1, hh || 0, mm || 0);
+            } catch { return null; }
+        }
+        function monthShortName(i) {
+            return ["Gen", "Feb", "Mar", "Apr", "Mag", "Giu", "Lug", "Ago", "Set", "Ott", "Nov", "Dic"][i] || "";
+        }
+
+        /** ===== Google Drive: estrai ID e genera candidate URLs con fallback ===== */
+        // --- DRIVE: estrazione ID
+        function extractDriveId(url) {
+            if (!url) return "";
+            let m = url.match(/\/file\/d\/([a-zA-Z0-9_-]+)/); if (m) return m[1];
+            m = url.match(/[?&]id=([a-zA-Z0-9_-]+)/); if (m) return m[1];
+            m = url.match(/thumbnail\?id=([a-zA-Z0-9_-]+)/); if (m) return m[1];
+            return "";
+        }
+
+        // --- DRIVE: mettiamo thumbnail come PRIMARIA (più affidabile), poi view, poi download
+        function driveImageCandidates(url) {
+            const id = extractDriveId(url);
+            if (!id) return null;
+            return {
+                // primaria più “permissiva”
+                primary: `https://drive.google.com/thumbnail?id=${id}&sz=w1200`,
+                // fallback 1: vista
+                fallback1: `https://drive.google.com/uc?export=view&id=${id}`,
+                // fallback 2: download (a volte aggira 403 su file piccoli)
+                fallback2: `https://drive.google.com/uc?export=download&id=${id}`
+            };
+        }
+
+        // --- Restituiamo { src, fallbacks } per il renderer
+        function resolveImageUrl(raw) {
+            const placeholder = "img/evento.jpg";
+            const url = (raw || "").trim();
+            if (!url) return { src: placeholder, fallbacks: [] };
+
+            if (url.includes("drive.google.com")) {
+                const c = driveImageCandidates(url);
+                if (c) return { src: c.primary, fallbacks: [c.fallback1, c.fallback2, placeholder] };
+                return { src: placeholder, fallbacks: [] };
+            }
+
+            if (/^https?:\/\//i.test(url)) return { src: url, fallbacks: [placeholder] };
+            return { src: url, fallbacks: [placeholder] }; // percorso relativo
+        }
+
+        /** Parser CSV (autodetect delimitatore , ; \t e gestisce BOM/virgolette) */
+        function parseCsv(text) {
+            if (text.charCodeAt(0) === 0xFEFF) text = text.slice(1); // BOM
+            const linesAll = text.replace(/\r\n/g, "\n").split("\n");
+            const lines = linesAll.filter((l, i) => !(i === 0 && !l.trim()) && l.trim() !== "");
+            if (!lines.length) return [];
+
+            const first = lines[0];
+            const commaCount = (first.match(/,(?=(?:[^"]*"[^"]*")*[^"]*$)/g) || []).length;
+            const semiCount = (first.match(/;(?=(?:[^"]*"[^"]*")*[^"]*$)/g) || []).length;
+            const tabCount = (first.match(/\t(?=(?:[^"]*"[^"]*")*[^"]*$)/g) || []).length;
+            let DELIM = ",";
+            if (semiCount > commaCount && semiCount >= tabCount) DELIM = ";";
+            else if (tabCount > commaCount && tabCount > semiCount) DELIM = "\t";
+
+            function splitRow(row) {
+                const out = [];
+                let cur = "", inQ = false;
+                for (let i = 0; i < row.length; i++) {
+                    const ch = row[i];
+                    if (ch === '"') {
+                        if (inQ && row[i + 1] === '"') { cur += '"'; i++; continue; } // "" -> "
+                        inQ = !inQ; continue;
+                    }
+                    if (ch === DELIM && !inQ) { out.push(cur); cur = ""; continue; }
+                    cur += ch;
+                }
+                out.push(cur);
+                return out.map(s => s.trim());
+            }
+
+            const header = splitRow(first).map(h => h.replace(/^"|"$/g, "").toLowerCase().trim());
+            const rows = [];
+            for (let i = 1; i < lines.length; i++) {
+                const row = lines[i];
+                if (!row.trim()) continue;
+                const cols = splitRow(row).map(v => v.replace(/^"|"$/g, ""));
+                const obj = {};
+                header.forEach((h, idx) => obj[h || `col${idx}`] = (cols[idx] ?? "").trim());
+                rows.push(obj);
+            }
+            return rows;
+        }
+
+        /** UI: render card evento (con fallback immagini) */
+        function renderEventItem(ev) {
+            const date = parseDate(ev.date, ev.time);
+            const day = date ? String(date.getDate()).padStart(2, "0") : "--";
+            const mon = date ? monthShortName(date.getMonth()) : "--";
+
+            const imgObj = resolveImageUrl(ev.image);
+            const imgSrc = imgObj.src;
+            const fallbacks = imgObj.fallbacks || [];
+
+            const onErr = fallbacks.length
+                ? `this.dataset.try=(this.dataset.try||0);const i=parseInt(this.dataset.try);const arr=${JSON.stringify(fallbacks)};if(i<arr.length){this.dataset.try=i+1;this.src=arr[i];}else{this.onerror=null;}`
+                : `this.onerror=null;`;
+
+            const tag = ev.tag ? `<span class="post-tag">${ev.tag}</span>` : "";
+            const button = ev.link
+                ? `<div class="ms-md-3 mt-3 mt-md-0"><a class="btn btn-primary" href="${ev.link}" target="_blank" rel="noopener">Dettagli</a></div>`
+                : "";
+
+            return `
+      <div class="list-group-item list-group-item-action bg-dark text-light border-secondary position-relative overflow-hidden mb-3 rounded-3">
+        <span class="date-chip"><span class="day">${day}</span><span class="month">${mon}</span></span>
+        <div class="d-md-flex align-items-center">
+          <img src="${imgSrc}"
+               class="rounded-3 me-md-3 mb-3 mb-md-0"
+               style="width:140px;height:90px;object-fit:cover;"
+               alt="Locandina evento"
+               loading="lazy"
+               referrerpolicy="no-referrer"
+  onerror="this.dataset.try=(this.dataset.try||0);
+           const i=parseInt(this.dataset.try);
+           const arr=JSON.parse(this.getAttribute('data-fallbacks')||'[]');
+           if(i<arr.length){ this.dataset.try=i+1; this.src=arr[i]; } else { this.onerror=null; }"
+  data-fallbacks='[]'>
+          <div class="flex-fill">
+            <h5 class="mb-1">${ev.title || "Evento"}</h5>
+            <p class="mb-1 text-white-50">
+              <i class="fa fa-clock me-1 text-primary"></i>${ev.time || "--:--"}
+              &nbsp;•&nbsp;
+              <i class="fa fa-location-dot me-1 text-primary"></i>${ev.location || "—"}
+            </p>
+            ${tag}
+          </div>
+          ${button}
+        </div>
+      </div>`;
+        }
+
+        /** Init */
+        async function initEvents() {
+            setupAdminLink();
+
+            const container = document.getElementById("events-list");
+            if (!container) return;
+
+            try {
+                const res = await fetch(PUBLISHED_CSV_URL, { cache: "no-store", mode: "cors", credentials: "omit" });
+                if (!res.ok) throw new Error(`HTTP ${res.status}`);
+                const text = await res.text();
+
+                console.log("[CSV preview]", text.slice(0, 200));
+
+                const rows = parseCsv(text);
+                if (!rows.length) throw new Error("CSV vuoto o intestazioni mancanti");
+
+                // Mapping tollerante (ITA/ENG)
+                const events = rows.map(e => ({
+                    date: (e.date || e.data || e.giorno || "").trim(),
+                    time: (e.time || e.ora || "").trim(),
+                    title: (e.title || e.titolo || "").trim(),
+                    location: (e.location || e.luogo || "").trim(),
+                    tag: (e.tag || e.categoria || "").trim(),
+                    link: (e.link || e.url || "").trim(),
+                    image: (e.image || e.immagine || e.locandina || "").trim()
+                }));
+
+                const parsed = events
+                    .map(ev => ({ ...ev, _date: parseDate(ev.date, ev.time) }))
+                    .filter(ev => ev._date instanceof Date && !isNaN(ev._date))
+                    .sort((a, b) => a._date - b._date);
+
+                if (!parsed.length) {
+                    container.innerHTML = `<div class="alert alert-dark border-secondary">Nessun evento presente. Compila il foglio (date, time, title, location…).</div>`;
+                    return;
+                }
+
+                // DOPO: mostra tutto (futuri + passati)
+                container.innerHTML = parsed.map(renderEventItem).join("");
+
+            } catch (err) {
+                console.error("Errore eventi (CSV):", err);
+                const localHint = location.protocol === "file:" ? "<br><small>(Stai aprendo il file in locale: usa un server come http://localhost per evitare CORS)</small>" : "";
+                document.getElementById("events-list").innerHTML =
+                    `<div class="alert alert-danger">Impossibile caricare gli eventi. Verifica: “Pubblica sul Web” in CSV, intestazioni riga 1 (date,time,title,location).${localHint}</div>`;
+            }
+        }
+    </script>
+    <!-- === /Google Sheets (Publish-to-Web CSV) === -->
+
+    <!-- === /Google Sheets (Publish-to-Web CSV) === -->
+    <script>
+        /** === NOTIZIE da Google Sheets (CSV “Pubblica sul Web”) ===
+         * 1) In Google Sheets: File → Condividi → Pubblica sul Web → scegli il tab "Notizie" → formato CSV → Pubblica
+         * 2) Incolla qui sotto l'URL che termina con &output=csv
+         */
+        const NEWS_PUBLISHED_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRXxF7-47GrbPewTHFdbqGUzMAZJTnzB9AQYWfrXAQYHnH-i0ScQv36kbBBodmvYbteFpiU1_I1moiN/pub?gid=0&single=true&output=csv";
+
+        /** (opz.) ID del foglio per il link “Modifica su Google Sheets” in admin (se lo vuoi mostrare da qualche parte) */
+        const NEWS_SHEET_EDIT_ID = ""; // es. "1AbC..."; se non ti serve, lascialo vuoto
+
+        document.addEventListener("DOMContentLoaded", initNews);
+
+        /* ---------- Utils condivise (snelle) ---------- */
+        function parseCsv(text) {
+            if (text.charCodeAt(0) === 0xFEFF) text = text.slice(1); // BOM
+            const lines = text.replace(/\r\n/g, "\n").split("\n").filter(l => l.trim() !== "");
+            if (!lines.length) return [];
+            // autodetect delimitatore (virgola/; /tab)
+            const first = lines[0];
+            const counts = {
+                ",": (first.match(/,(?=(?:[^"]*"[^"]*")*[^"]*$)/g) || []).length,
+                ";": (first.match(/;(?=(?:[^"]*"[^"]*")*[^"]*$)/g) || []).length,
+                "\t": (first.match(/\t(?=(?:[^"]*"[^"]*")*[^"]*$)/g) || []).length
+            };
+            let DELIM = Object.entries(counts).sort((a, b) => b[1] - a[1])[0][0];
+
+            function splitRow(row) {
+                const out = []; let cur = "", inQ = false;
+                for (let i = 0; i < row.length; i++) {
+                    const ch = row[i];
+                    if (ch === '"') { if (inQ && row[i + 1] === '"') { cur += '"'; i++; } else inQ = !inQ; continue; }
+                    if (ch === DELIM && !inQ) { out.push(cur); cur = ""; continue; }
+                    cur += ch;
+                }
+                out.push(cur);
+                return out.map(s => s.trim().replace(/^"|"$/g, ""));
+            }
+
+            const header = splitRow(first).map(h => h.toLowerCase().trim());
+            const rows = [];
+            for (let i = 1; i < lines.length; i++) {
+                const cols = splitRow(lines[i]);
+                const obj = {};
+                header.forEach((h, idx) => obj[h || `col${idx}`] = (cols[idx] ?? "").trim());
+                rows.push(obj);
+            }
+            return rows;
+        }
+
+        function monthShortName(i) {
+            return ["Gen", "Feb", "Mar", "Apr", "Mag", "Giu", "Lug", "Ago", "Set", "Ott", "Nov", "Dic"][i] || "";
+        }
+        function parseDateYMD(s) {
+            try { const [y, m, d] = (s || "").split("-").map(Number); return new Date(y, (m || 1) - 1, d || 1); } catch { return null; }
+        }
+        function extractDriveId(url) {
+            if (!url) return "";
+            let m = url.match(/\/file\/d\/([a-zA-Z0-9_-]+)/); if (m) return m[1];
+            m = url.match(/[?&]id=([a-zA-Z0-9_-]+)/); if (m) return m[1];
+            m = url.match(/thumbnail\?id=([a-zA-Z0-9_-]+)/); if (m) return m[1];
+            return "";
+        }
+        function resolveImageUrl(raw) {
+            const placeholder = "img/agonismo.jpg";
+            const url = (raw || "").trim();
+            if (!url) return { src: placeholder, fallbacks: [] };
+            if (url.includes("drive.google.com")) {
+                const id = extractDriveId(url);
+                if (id) return {
+                    src: `https://drive.google.com/thumbnail?id=${id}&sz=w1200`,
+                    fallbacks: [
+                        `https://drive.google.com/uc?export=view&id=${id}`,
+                        `https://drive.google.com/uc?export=download&id=${id}`,
+                        placeholder
+                    ]
+                };
+                return { src: placeholder, fallbacks: [] };
+            }
+            if (/^https?:\/\//i.test(url)) return { src: url, fallbacks: [placeholder] };
+            return { src: url, fallbacks: [placeholder] }; // percorso relativo
+        }
+
+        /* ---------- Render: UNA card (stile identico al tuo) ---------- */
+        function renderNewsCard(item) {
+            const dt = parseDateYMD(item.date);
+            const day = dt ? String(dt.getDate()).padStart(2, "0") : "--";
+            const mon = dt ? monthShortName(dt.getMonth()) : "--";
+            const img = resolveImageUrl(item.image);
+            const fallbacks = JSON.stringify(img.fallbacks || []);
+            const tag = item.tag ? `<span class="post-tag mb-2">${item.tag}</span>` : "";
+            const cta = item.url ? `<a href="${item.url}" class="btn btn-sm btn-outline-primary border-2" target="_blank" rel="noopener">Leggi di più</a>` : "";
+
+            return `
+  <div class="col-md-6 wow fadeInUp" data-wow-delay="0.15s">
+    <div class="card bg-dark text-light border-0 h-100">
+      <div class="position-relative">
+        <img src="${img.src}" class="card-img-top"
+             alt="${(item.title || 'Notizia').replace(/"/g, '&quot;')}"
+             style="height:280px; object-fit:cover;"
+             loading="lazy"
+             referrerpolicy="no-referrer"
+             onerror="this.dataset.try=(this.dataset.try||0);const i=parseInt(this.dataset.try);const arr=${fallbacks};if(i<arr.length){this.dataset.try=i+1;this.src=arr[i];}else{this.onerror=null;}">
+        <span class="date-chip" style="right:1rem; left:auto;"><span class="day">${day}</span><span class="month">${mon}</span></span>
+      </div>
+      <div class="card-body">
+        ${tag}
+        <h5 class="card-title mt-2">${item.title || "Notizia"}</h5>
+        <p class="card-text text-white-50">${item.excerpt || ""}</p>
+      </div>
+      <div class="card-footer bg-dark border-0 pt-0 pb-4 px-4">
+        ${cta}
+      </div>
+    </div>
+  </div>`;
+        }
+
+        /* ---------- Init: fetch CSV, ordina, mostra 4 (anteprima) + “Mostra tutte” ---------- */
+        async function initNews() {
+            const box = document.getElementById("news-list");
+            const btn = document.getElementById("show-all-news");
+            if (!box) return;
+
+            try {
+                const res = await fetch(NEWS_PUBLISHED_CSV_URL, { cache: "no-store", mode: "cors", credentials: "omit" });
+                if (!res.ok) throw new Error(`HTTP ${res.status}`);
+                const text = await res.text();
+                const rows = parseCsv(text);
+                if (!rows.length) throw new Error("CSV vuoto o intestazioni mancanti");
+
+                // mappa colonne (ITA/ENG)
+                const items = rows.map(r => ({
+                    date: (r.date || r.data || "").trim(),          // YYYY-MM-DD
+                    title: (r.title || r.titolo || "").trim(),
+                    excerpt: (r.excerpt || r.anteprima || r.sommario || "").trim(),
+                    url: (r.url || r.link || "").trim(),
+                    image: (r.image || r.immagine || "").trim(),
+                    tag: (r.tag || r.categoria || "").trim()
+                }));
+
+                // ordina per data desc
+                const parsed = items
+                    .map(n => ({ ...n, _d: parseDateYMD(n.date) }))
+                    .filter(n => n._d instanceof Date && !isNaN(n._d))
+                    .sort((a, b) => b._d - a._d);
+
+                if (!parsed.length) {
+                    box.innerHTML = `<div class="alert alert-dark border-secondary w-100">Nessuna notizia pubblicata.</div>`;
+                    return;
+                }
+
+                const MAX = 4; // quante card vuoi in questa sezione
+                const preview = parsed.slice(0, MAX);
+                box.innerHTML = preview.map(renderNewsCard).join("");
+
+                if (parsed.length > MAX && btn) {
+                    btn.classList.remove("d-none");
+                    btn.onclick = () => {
+                        box.innerHTML = parsed.map(renderNewsCard).join("");
+                        btn.remove();
+                    };
+                }
+            } catch (err) {
+                console.error("Errore notizie:", err);
+                const hint = location.protocol === "file:" ? "<br><small>(Se stai aprendo il file in locale: usa http://localhost per evitare CORS)</small>" : "";
+                box.innerHTML = `<div class="alert alert-danger w-100">Impossibile caricare le notizie. Verifica “Pubblica sul Web” in CSV e intestazioni corrette.${hint}</div>`;
+            }
+        }
+    </script>
+
+</body>
+
+</html>
