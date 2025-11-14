@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Atletica Libertas</title>
+    <title>Atletica Libertas - Città di Castello</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="atleticalibertas" name="keywords">
     <meta content="atleticalibertas" name="description">
@@ -76,7 +76,15 @@
             margin-top: auto;
         }
 
-        /* spinge il footer in fondo anche con poco contenuto */
+        @media(min-width: 991px){
+            .me-2{
+                width: 60px !important;
+                height: 60px !important;
+            }
+            .mia{
+                font-size: 12pt !important;
+            }
+        }
     </style>
 
     <script type="application/ld+json">
@@ -128,7 +136,7 @@
             <a href="index.html" class="navbar-brand ms-4 ms-lg-0 d-flex align-items-center">
                 <img src="img/logo-no-sfondo.png" alt="Logo" style="width: 100px; height:100px; object-fit:contain;"
                     class="me-2">
-                <h2 class="mb-0 text-uppercase">Atletica Libertas</h2>
+                <h2 class="mb-0 text-uppercase mia">Atletica Libertas</h2>
             </a>
             <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse"
                 data-bs-target="#navbarCollapse">
