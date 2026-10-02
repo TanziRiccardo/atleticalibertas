@@ -1,12 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 
 <head>
     <meta charset="utf-8">
     <title>Atletica Libertas - Città di Castello</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="atleticalibertas" name="keywords">
-    <meta content="atleticalibertas" name="description">
     <!-- SEO BASE -->
     <meta name="title" content="Atletica Libertas - Associazione sportiva di atletica leggera">
     <meta name="description"
@@ -77,7 +75,7 @@
         }
 
         @media(max-width: 991px){
-            .me-2{
+            .navbar-brand img.me-2{
                 width: 60px !important;
                 height: 60px !important;
             }
@@ -117,6 +115,7 @@
 }
 </script>
 
+    <noscript><style>#spinner { display: none !important; }</style></noscript>
 </head>
 
 <body>
@@ -124,7 +123,7 @@
     <div id="spinner"
         class="show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
-            <span class="sr-only">Loading...</span>
+            <span class="visually-hidden">Caricamento…</span>
         </div>
     </div>
     <!-- Spinner End -->
@@ -139,7 +138,7 @@
                 <h2 class="mb-0 text-uppercase mia">Atletica Libertas</h2>
             </a>
             <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse"
-                data-bs-target="#navbarCollapse">
+                data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Apri il menu">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -325,7 +324,7 @@
                 <div class="row g-0 align-items-center">
                     <div class="col-md-5">
                         <div class="service-img p-5 wow fadeInRight" data-wow-delay="0.2s">
-                            <img class="img-fluid rounded-circle" src="img/amatori-adulti.jpg"
+                            <img class="img-fluid rounded-circle" src="img/agonismo.jpg"
                                 alt="Atletica per adulti e amatori">
                         </div>
                     </div>
@@ -385,13 +384,11 @@
                     </div>
                     <p class="fs-5 mb-5 wow fadeInUp" data-wow-delay="0.2s">
                         Scopri la passione, la tecnica e la forza di una grande famiglia sportiva.
-                        Lascia la tua email per ricevere informazioni su corsi, orari e eventi.
+                        Contattaci per ricevere informazioni su corsi, orari ed eventi.
                     </p>
-                    <div class="position-relative wow fadeInUp" data-wow-delay="0.3s">
-                        <input class="form-control border-0 bg-dark rounded-pill w-100 py-4 ps-4 pe-5" type="text"
-                            placeholder="La tua email">
-                        <button type="button" class="btn btn-primary py-3 px-4 position-absolute top-0 end-0 me-2"
-                            style="margin-top: 7px;">Iscriviti</button>
+                    <div class="d-flex flex-wrap gap-3 justify-content-center wow fadeInUp" data-wow-delay="0.3s">
+                        <a class="btn btn-primary py-3 px-4" href="mailto:info@atleticalibertas.it?subject=Informazioni%20corsi%20Atletica%20Libertas">Scrivici per informazioni</a>
+                        <a class="btn btn-outline-primary border-2 py-3 px-4" href="tel:+393384307792">Chiama la società</a>
                     </div>
                 </div>
             </div>
@@ -527,7 +524,7 @@
                     href="https://www.instagram.com/atleticalibertas" target="_blank"><i
                         class="fab fa-instagram"></i></a>
                 <a class="btn btn-lg-square btn-outline-primary border-2 m-1"
-                    href="mailto:info@atleticalibertascastello.it"><i class="fa-regular fa-envelope"></i></a>
+                    href="mailto:info@atleticalibertas.it"><i class="fa-regular fa-envelope"></i></a>
             </div>
 
             <p class="mb-2">
@@ -577,7 +574,7 @@
     <script src="lib/lightbox/js/lightbox.min.js"></script>
 
     <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+    <script src="js/main.js?v=20261002"></script>
 </body>
 
 </html>
